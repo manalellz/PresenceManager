@@ -3,4 +3,4 @@ PrésenceManager
 Application Android permettant de gérer la présence des stagiaires.
 Ce projet a été réalisé dans le cadre du TP01.
 
-![screenshot.png](./screenshot.png)
+![Screenshot](../screenshot.png)
