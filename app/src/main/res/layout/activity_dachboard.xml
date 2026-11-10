@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8FAFC">
+
     <RelativeLayout
         android:id="@+id/layoutHeader"
         android:layout_width="0dp"
@@ -19,21 +20,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-        <ImageView
-            android:id="@+id/imgProfil"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:src="@android:drawable/ic_menu_myplaces" />
+
         <LinearLayout
             android:id="@+id/layoutHeaderText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
             android:layout_toStartOf="@id/imgProfil"
-            android:orientation="vertical">
+            android:layout_centerVertical="true">
 
             <TextView
                 android:id="@+id/txtAppName"
@@ -42,7 +37,7 @@
                 android:text="Présence Manager"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:textColor="#FF9800" />
+                android:textColor="#FF9800"/>
 
             <TextView
                 android:id="@+id/txtSubtitle"
@@ -51,33 +46,50 @@
                 android:layout_marginTop="6dp"
                 android:text="Tableau de bord"
                 android:textSize="15sp"
-                android:textColor="#CBD5E1" />
+                android:textColor="#CBD5E1"/>
+
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgProfil"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="Profil"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="#FFFFFF"/>
+
     </RelativeLayout>
+
     <TextView
         android:id="@+id/txtBienvenue"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
         android:text="Bienvenue, Formateur"
         android:textSize="23sp"
         android:textStyle="bold"
         android:textColor="#1E3A5F"
         app:layout_constraintTop_toBottomOf="@id/layoutHeader"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/txtInstruction"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
         android:text="Choisissez une fonctionnalité"
         android:textSize="15sp"
         android:textColor="#64748B"
         app:layout_constraintTop_toBottomOf="@id/txtBienvenue"
-        app:layout_constraintStart_toStartOf="@id/txtBienvenue" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <GridLayout
         android:id="@+id/gridFonctionnalites"
         android:layout_width="0dp"
@@ -85,20 +97,18 @@
         android:layout_marginTop="32dp"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
-        android:rowCount="2"
         android:columnCount="2"
+        android:rowCount="2"
         app:layout_constraintTop_toBottomOf="@id/txtInstruction"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
 
         <LinearLayout
             android:id="@+id/cardGroupes"
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="0"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
             android:layout_margin="6dp"
             android:padding="12dp"
             android:orientation="vertical"
@@ -106,28 +116,27 @@
             android:background="#E0E7FF">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@android:drawable/ic_menu_agenda"
-                android:tint="#6366F1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="#1E3A5F"
+                android:contentDescription="Groupes"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:text="Groupes"
-                android:textSize="13sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="#1E293B" />
+                android:textColor="#1E3A5F"/>
+
         </LinearLayout>
         <LinearLayout
             android:id="@+id/cardAppel"
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="0"
-            android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
             android:layout_margin="6dp"
             android:padding="12dp"
             android:orientation="vertical"
@@ -136,15 +145,16 @@
 
             <FrameLayout
                 android:id="@+id/frameAppel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="64dp"
+                android:layout_height="64dp">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_margin="6dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
                     android:src="@android:drawable/ic_menu_edit"
-                    android:tint="#3B82F6" />
+                    app:tint="#1E3A5F"
+                    android:contentDescription="Faire l'appel"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="22dp"
@@ -158,32 +168,31 @@
                         android:id="@+id/txtBadge"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="1"
                         android:textSize="12sp"
                         android:textStyle="bold"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"/>
+
                 </androidx.cardview.widget.CardView>
+
             </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:text="Faire l'appel"
-                android:textSize="13sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="#1E293B" />
-        </LinearLayout>
+                android:textColor="#1E3A5F"/>
 
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/cardHistorique"
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="1"
-            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
             android:layout_margin="6dp"
             android:padding="12dp"
             android:orientation="vertical"
@@ -191,29 +200,28 @@
             android:background="#D1FAE5">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:src="@android:drawable/ic_menu_recent_history"
-                android:tint="#10B981" />
+                app:tint="#1E3A5F"
+                android:contentDescription="Historique"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:text="Historique"
-                android:textSize="13sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="#064E3B" />
+                android:textColor="#1E3A5F"/>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/cardStatistiques"
             android:layout_width="0dp"
             android:layout_height="145dp"
-            android:layout_row="1"
-            android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
             android:layout_margin="6dp"
             android:padding="12dp"
             android:orientation="vertical"
@@ -221,20 +229,23 @@
             android:background="#FEF3C7">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@android:drawable/ic_menu_sort_by_size"
-                android:tint="#F59E0B" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                app:tint="#1E3A5F"
+                android:contentDescription="Statistiques"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:text="Statistiques"
-                android:textSize="13sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="#78350F" />
+                android:textColor="#1E3A5F"/>
+
         </LinearLayout>
+
     </GridLayout>
 
     <TextView
@@ -245,8 +256,9 @@
         android:text="PrésenceManager - Version 1.0"
         android:textSize="12sp"
         android:textColor="#94A3B8"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
