@@ -6,19 +6,8 @@
 
 Application Android développée dans le cadre du module **M203 — Développement d'applications mobiles** (Filière Développement Digital — Option Applications Mobiles).
 
----
 
-## 🖼️ Captures d'écran de l'application
 
-| Écran d'accueil | Tableau de Bord | Page de Fonctionnalité |
-| :---: | :---: | :---: |
-| ![Accueil](README/screenshot_accueil.png) | ![Dashboard](README/screenshot_dashboard.png) | ![Groupes](README/screenshot_groupes.png) |
-
-| Boîte "À propos" (Double-clic) | Boîte "Informations Développeur" |
-| :---: | :---: |
-| ![À propos](README/screenshot_a_propos.png) | ![Informations Développeur](README/screenshot_developpeur.png) |
-
----
 
 ## 📝 1. Description du projet
 **PrésenceManager** est une application Android native permettant aux formateurs de gérer la présence des stagiaires. 

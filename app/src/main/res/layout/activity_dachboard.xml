@@ -90,6 +90,7 @@
         app:layout_constraintTop_toBottomOf="@id/txtBienvenue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <GridLayout
         android:id="@+id/gridFonctionnalites"
         android:layout_width="0dp"
@@ -102,7 +103,6 @@
         app:layout_constraintTop_toBottomOf="@id/txtInstruction"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
 
         <LinearLayout
             android:id="@+id/cardGroupes"
@@ -132,6 +132,7 @@
                 android:textColor="#1E3A5F"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/cardAppel"
             android:layout_width="0dp"
@@ -188,6 +189,7 @@
                 android:textColor="#1E3A5F"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/cardHistorique"
             android:layout_width="0dp"
@@ -247,6 +249,39 @@
         </LinearLayout>
 
     </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/gridFonctionnalites"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnCab"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="CAB"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2563EB" />
+
+        <Button
+            android:id="@+id/btnPopup"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Pop-up"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#0F766E" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/txtFooterDashboard"
