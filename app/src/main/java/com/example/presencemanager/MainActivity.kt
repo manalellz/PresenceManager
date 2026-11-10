@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
             .setMessage(
                 "Application : PrésenceManager\n" +
                         "Version : 1.0\n" +
-                        "Développeur : Mohamed EL HAIRCHE\n" +
-                        "GitHub : https://github.com/Mohamed22-Dev/PresenceManager"
+                        "Développeur : Manal ELLOUZI\n" +
+                        "GitHub : https://github.com/manalellz/PresenceManager"
             )
             .setPositiveButton("OK", null)
             .show()
